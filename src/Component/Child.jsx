@@ -1,11 +1,11 @@
 import React from 'react';
 
-function login(props) {
+function Child(props) {
     return (
         <div>
-            <h1>Login</h1>
+            Here is Nested child
         </div>
     );
 }
 
-export default login;
+export default Child;

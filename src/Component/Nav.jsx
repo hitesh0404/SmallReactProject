@@ -1,24 +1,32 @@
 import React from 'react';
 import './Nav.css'
-function Nav(props) {
+import { Link, NavLink } from 'react-router';
+export default function Nav(props) {
     return (
         <div>
-            <ul>
-                <a href="/">
-                    <li>Home</li>
-                </a>
-                <a href="/about">
-                    <li>About</li>
-                </a>
-                <a href="/login">
-                    <li>Login</li>
-                </a>
-                <a href="/Register">
-                    <li>Register</li>
-                </a>
-            </ul>
+            <li>
+                <NavLink to="/" className={( {isActive} )=> isActive? 'active':''} >
+                   Home
+                </NavLink>
+            </li>
+            <li>
+            <NavLink to="/about" className={({ isActive }) =>  isActive ? "active" : ""} >
+                   About
+                </NavLink>
+                </li>
+                <li>
+                <NavLink to="/login" className={({ isActive }) =>  isActive ? "active" : ""} >
+                    Login
+                </NavLink>
+                </li>
+                <li>
+                <NavLink to="/register" className={({ isActive }) =>  isActive ? "active" : ""} >
+                    Register
+                </NavLink>
+                </li>
+
         </div>
     );
 }
 
-export default Nav;
+// export default Nav;

@@ -4,3 +4,8 @@ li{
     margin: 20px;
     padding: 10px;   
 }
+.active{
+    border: 2px solid green;
+    padding: 10px;
+    box-shadow: 2px ;
+}
